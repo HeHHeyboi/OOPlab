@@ -29,6 +29,14 @@ class Customer{
 		return "ID: "+id+" Name: " +name +" Balance: "+balance;
 	}
 }
+class ComparatorCustomerByIdAsc implements Comparator<Customer>{
+	public ComparatorCustomerByIdAsc(){}
+	
+	@Override
+	public int compare(Customer o1,Customer o2{
+		return o1.getID()-o2.getID();
+	}
+}
 public class Main {
 
 	public static void main(String[] args) {
@@ -75,5 +83,9 @@ public class Main {
 		customers.forEach(e->System.out.println(e));
 		System.out.println("\n\n Looping by foreach -method reference");
 		customers.forEach(System.out::println);// Scope resolution, used to identify function
+
+		Collection.sort(customers,new ComparatorCustomerByIdAsc());
+		System.out.println("== sorting customer list by ascending");
+		customers.forEach(e->System.out.println(e));
 	}
 }
