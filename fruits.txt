@@ -1,0 +1,4 @@
+apple, banana, pie apple, mango
+banana, apple, cherry, orange
+Strawberry, Watermalon, strawberry
+Watermalon, apple
