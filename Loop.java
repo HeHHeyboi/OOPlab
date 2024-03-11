@@ -36,8 +36,8 @@ class Customer{
 		return "ID: "+id+" Name: " +name +" Balance: "+balance;
 	}
 }
-class ComparatorCustomerByIdAsc implements Comparator<Customer>{
-	public ComparatorCustomerByIdAsc(){}
+class SortById implements Comparator<Customer>{
+	public SortById(){}
 	
 	public int compare(Customer o1,Customer o2){
 		return o1.getId()-o2.getId();
