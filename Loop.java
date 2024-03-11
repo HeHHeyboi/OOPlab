@@ -36,6 +36,7 @@ class Customer{
 		return "ID: "+id+" Name: " +name +" Balance: "+balance;
 	}
 }
+//sort by id
 class SortById implements Comparator<Customer>{
 	public SortById(){}
 	
@@ -107,8 +108,10 @@ public class Loop {
 		customers.forEach(e->System.out.println(e));
 		System.out.println("\n\n Looping by foreach -method reference");
 		customers.forEach(System.out::println);// Scope resolution, used to identify function
-
+		
+		//เรียกใช้ SortbyID
 		Collections.sort(customers,new ComparatorCustomerByIdAsc());
+		
 		System.out.println("== sorting customer list by ascending");
 		customers.forEach(e->System.out.println(e));
 		System.out.println("\n\nSearch by name");
